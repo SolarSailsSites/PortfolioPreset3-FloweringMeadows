@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Preset 3 - Flowering Meadows Portfolio</title>
+    <!-- Browser Tab Icon -->
+    <link rel="icon" href="https://i.postimg.cc/tR3Q8QdN/Icon.png">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 256x144 Downscaled Hardware Engine Canvas -->
+    <canvas id="flowerCanvas" title="Click anywhere to hide/show bio card"></canvas>
+
+    <!-- Interactive Glassmorphic Card Overlay -->
+    <div class="viewport-overlay" id="overlay">
+        <div class="profile-card">
+
+            <!-- CARD HEADER -->
+            <div class="card-header">
+                <div class="avatar-frame">
+                    <img src="https://miro.medium.com/max/256/0*8WdBp_k4REJoMkfF.png" alt="Avatar">
+                </div>
+                <div class="username">Username-Here</div>
+                <div class="tagline">Status-Here</div>
+            </div>
+
+            <!-- TAB NAVIGATION (5 SECTIONS) -->
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-target="about">About</button>
+                <button class="tab-btn" data-target="tos">TOS</button>
+                <button class="tab-btn" data-target="price">Price</button>
+                <button class="tab-btn" data-target="gallery">Gallery</button>
+                <button class="tab-btn" data-target="reviews">Reviews</button>
+            </nav>
+
+            <!-- SCROLLABLE CONTENT AREA -->
+            <div class="card-scroll-body">
+
+                <!-- TAB 1: ABOUT -->
+                <section id="about" class="tab-pane active">
+                    <div>
+                        <div class="section-title">About Me</div>
+                        <div class="bio-text">
+                            Bio here.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="section-title">Links & Socials - you can put as many as you want</div>
+                        <div class="links-container">
+                            <!-- LINK 1 -->
+                            <a href="#" class="bio-link" target="_blank">
+                                <span>⛓️ Link 1</span>
+                                <span>→</span>
+                            </a>
+                            <!-- LINK 2 -->
+                            <a href="#" class="bio-link" target="_blank">
+                                <span>⛓️ Link 2</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="section-title">Additional Info</div>
+                        <div class="bio-text" style="font-family: monospace; font-size: 0.8rem; color: #ffffff;">
+                            Additional Info here.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 2: TOS -->
+                <section id="tos" class="tab-pane">
+                    <div>
+                        <div class="section-title" style="font-size: 1.15rem; margin-bottom: 16px;">Terms of Service</div>
+                        <div style="display: flex; flex-direction: column; gap: 18px;">
+                            <div>
+                                <h3 style="color: #ff69b4; font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">TOS — GENERAL RULES</h3>
+                                <ul class="bio-text" style="padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                                    <li>TOS point here.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 3: PRICE -->
+                <section id="price" class="tab-pane">
+                    <div>
+                        <div class="section-title" style="font-size: 1.15rem; margin-bottom: 16px;">Pricing & Commissions</div>
+                        <div style="display: flex; flex-direction: column; gap: 18px;">
+                            <div>
+                                <h3 style="color: #ff69b4; font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">PRICES HERE</h3>
+                                <ul class="bio-text" style="padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                                    <li>Price details here.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 4: GALLERY (Image View Only, 3 Per Row) -->
+                <section id="gallery" class="tab-pane">
+                    <div>
+                        <div class="section-title" style="font-size: 1.15rem; margin-bottom: 16px;">Photo Gallery</div>
+                        <div class="preview-grid">
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMffWSPSHiIm-9xfGj_-5_2pTdXV2v0uCJcnUQRTkSUusUyX2CWiEcvY&s=10')">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMffWSPSHiIm-9xfGj_-5_2pTdXV2v0uCJcnUQRTkSUusUyX2CWiEcvY&s=10" alt="Art 1">
+                                </div>
+                                <div class="preview-link-btn">Art here</div>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://shetanislair.com/static/6033abd6466e506bf3761a4788c26a36/5ef20/12.webp')">
+                                    <img src="https://shetanislair.com/static/6033abd6466e506bf3761a4788c26a36/5ef20/12.webp" alt="Art 2">
+                                </div>
+                                <div class="preview-link-btn">Art here</div>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://static.wikia.nocookie.net/pilgrammed-rblx/images/c/c7/Legion6.png/revision/latest/scale-to-width-down/2000?cb=20241219023244')">
+                                    <img src="https://static.wikia.nocookie.net/pilgrammed-rblx/images/c/c7/Legion6.png/revision/latest/scale-to-width-down/2000?cb=20241219023244" alt="Art 3">
+                                </div>
+                                <div class="preview-link-btn">Art here</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 5: REVIEWS (3 Per Row) -->
+                <section id="reviews" class="tab-pane">
+                    <div>
+                        <div class="section-title" style="font-size: 1.15rem; margin-bottom: 16px;">Client Reviews</div>
+                        <div class="preview-grid">
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://i.postimg.cc/TwwCFKzs/review.png')">
+                                    <img src="https://i.postimg.cc/TwwCFKzs/review.png" alt="Review 1">
+                                </div>
+                                <div class="preview-link-btn">Review here</div>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://i.postimg.cc/TwwCFKzs/review.png')">
+                                    <img src="https://i.postimg.cc/TwwCFKzs/review.png" alt="Review 2">
+                                </div>
+                                <div class="preview-link-btn">Review here</div>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-img-box review-lightbox-trigger" onclick="openImageModal('https://i.postimg.cc/TwwCFKzs/review.png')">
+                                    <img src="https://i.postimg.cc/TwwCFKzs/review.png" alt="Review 3">
+                                </div>
+                                <div class="preview-link-btn">Review here</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COPYRIGHT FOOTER -->
+            <div class="card-footer" id="cardFooter">
+                © <span id="current-year"></span> SolarSailsSites. All Rights Reserved.
+            </div>
+
+            <!-- IN-CARD IMAGE MODAL LIGHTBOX VIEWER -->
+            <div id="imageModal" class="image-modal">
+                <button class="modal-back-btn" onclick="closeImageModal()">← Back</button>
+                <div class="modal-img-container">
+                    <img id="expandedModalImg" src="" alt="Expanded View">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Focus Toggle Hint -->
+    <div class="toggle-hint" id="hint">Click background to toggle view focus</div>
+
+    <!-- External Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
